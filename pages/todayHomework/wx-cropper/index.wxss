@@ -1,0 +1,25 @@
+/* pages/wx-cropper/index.wxss */
+
+.wx-content-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.error-flag {
+  position: absolute;
+  z-index: 2;
+  border: 1px solid red;
+}
+.error-des{
+  font-size: 10;
+  text-align: left;
+}
+
+.cropper{
+    background-color: rgba(0,0,0,.8);
+    z-index: 1;
+    margin: auto;
+}

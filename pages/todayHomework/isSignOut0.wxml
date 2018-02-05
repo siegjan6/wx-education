@@ -1,0 +1,32 @@
+<template name="isSignOut0">
+  <wxs src="./tools.wxs" module="tools" />
+
+  <view class="doc-title zan-hairline--bottom">晚托中</view>
+  <view class="zan-panel-title"> </view> 
+  <view class="zan-row">
+    <view class="zan-col zan-col-12">
+      签到时间
+    </view>
+    <view class="zan-col zan-col-12">
+      {{signInTime}}
+    </view>
+  </view>
+
+  <view class="zan-row">
+    <view class="zan-col zan-col-12">
+      作业已完成 / 作业总数
+    </view>
+    <view class="zan-col zan-col-12">
+      {{taskTotalDoneCount}} / {{taskTotalCount}}
+    </view>
+  </view> 
+
+  <view class="zan-row ">
+    <view class="zan-col zan-col-12  ">
+      已阅读
+    </view>
+    <view class="zan-col zan-col-12 ">
+      {{readingDuration}} 分钟
+    </view>
+  </view>  
+</template>

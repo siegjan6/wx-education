@@ -1,0 +1,17 @@
+<!--errorDes,errorX,errorY,errorId,remark,score,taskErrorId  -->
+<template name="show-error">
+  <view class='error-flag' style='left:{{errorX}}px;top:{{errorY}}px;'>
+    <view class='error-des'>{{errorDes}}</view>
+  </view>
+</template>
+
+<view class="wx-content-info" wx:if="{{path}}">
+  <view wx:if="{{isShowImg}}" class="wx-corpper" style="width:{{cropperInitW}}rpx;height:{{cropperInitH}}rpx;background:#000">
+    <view class="wx-corpper-content" style="width:{{cropperW}}rpx;height:{{cropperH}}rpx;left:{{cropperL}}rpx;top:{{cropperT}}rpx">
+       <image bindload="cusImageLoad"  src="{{path}}" style="width:{{imageWidth}}px;height:{{imageheight}}px"></image> 
+      <block wx:for="{{errorList}}" wx:key="unique">
+        <template is="show-error" data="{{...item}}" />
+      </block>
+    </view>
+  </view>
+</view>

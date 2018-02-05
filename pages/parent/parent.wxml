@@ -1,0 +1,28 @@
+<import src="templdate.wxml" />
+<view class="container">
+  <view class="student-back">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class='userinfo-name' wx:if='{{userInfo != undefined}}'>
+      {{userInfo.nickName}}
+    </view>
+
+    <block wx:if="{{flag == 0}}">
+      <text class='bind-btn' bind:tap="onBindMobile">绑定手机</text>
+    </block>
+    <block wx:else>
+      <text class='bind-btn' bind:tap="onBindMobile">更改号码</text>
+      <view class='query-view'>
+        <picker mode="date" value="{{date}}" start="2018-01-01" end="{{nowDate}}" bindchange="bindDateChange">查询作业 |
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker> 
+      </view>
+      <view class='cards'>
+        <block wx:for="{{studentList}}" wx:key="unique">
+          <template is="student" data="{{...item}}" />
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

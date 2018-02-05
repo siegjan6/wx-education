@@ -1,0 +1,38 @@
+.studentCard {
+  height: 40px;
+  border: 1px solid #888;
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #888;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 90%;
+  line-height: 50px;
+}
+ 
+
+.studentCard-name {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15;
+  color: red;
+  top: 26px;
+  left: 26px;
+}
+
+.studentCard-school {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15;
+  right: 6px;
+  bottom: 6px;
+}
+
+.studentCard-grade {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15;
+  right: 6px;
+  top: 6px;
+}

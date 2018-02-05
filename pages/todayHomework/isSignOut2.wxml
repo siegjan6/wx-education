@@ -1,0 +1,5 @@
+<template name="isSignOut2">
+  <text>
+当日未签到
+</text>
+</template>

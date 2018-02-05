@@ -1,0 +1,14 @@
+<import src='templdate.wxss' />
+<template name="student">
+  <form bindsubmit="submitInfo"  id="{{stdId}}" report-submit='true'>
+    <button class='studentCard' form-type="submit" type="default" size="mini">
+      {{name}} </button>
+  </form>
+  <!-- <view class='studentCard' id="{{stdId}}" bind:tap="onStudentDetal">
+    <text class='studentCard-name'> {{name}} </text>
+    <text class='studentCard-school'> {{school}} </text>
+    <text class='studentCard-grade'> {{grade}} </text>
+  </view> -->
+</template>
+
+<!-- {"stdId":0,"grade":"一年级","availableCredit":43,"clasBelongs":"[晚托班]一班","sex":"男","enrollDate":"2017-07-01 00:00:00","portrait":"default","readingTimeDuration":1588,"source":"他人介绍","isRequiredDinner":false,"gradeDictId":16,"status":true,"school":"三林小学","stdNo":"001","remark":null,"name":"周小建","schoolDictId":2,"sourceDictId":0,"clasBelongsIds":[{"id":0,"name":"[晚托班]一班"}],"relaxTimeDuration":0,"totalCredit":43,"sexDictId":4,"clas":"二班"} -->

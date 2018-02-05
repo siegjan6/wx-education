@@ -1,0 +1,23 @@
+<view class='jd-view'>
+  <image class="jd-index" src="https://www.jdyeducation.com/images/index.jpg"></image>
+  <import src="/dist/field/index.wxml" />
+
+  <view class="container">
+    <!-- form 中使用 Field -->
+    <view class="zan-panel-title">基本信息</view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="zan-panel">
+        <template is="zan-field" data="{{ ...config.form.name }}"></template>
+        <template is="zan-field" data="{{ ...config.form.tel }}"></template>
+        <template is="zan-field" data="{{ ...config.form.detail }}"></template>
+        <view class="zan-btns">
+          <button class="jd-button" formType="submit">提 交</button>
+        </view>
+      </view>
+    </form>
+
+  </view>
+
+</view>
+
+<!-- zan-c-black zan-font-bold zan-font-22 zan-hairline--bottom -->

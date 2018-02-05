@@ -1,0 +1,97 @@
+<template name="isSignOut1">
+  <wxs src="./tools.wxs" module="tools" />
+
+  <view class="doc-title zan-hairline--bottom">签退信息</view>
+  <view class="zan-panel-title">基本信息</view>
+  <view class="zan-row">
+    <view class="jd-title zan-col zan-col-12">
+      姓名
+    </view>
+    <view class="jd-value zan-col zan-col-12">
+      {{studentName}}
+    </view>
+  </view>
+  <view class="zan-row">
+    <view class="zan-col zan-col-12">
+      签到 / 签退
+    </view>
+    <view class="zan-col zan-col-12">
+      {{signInTime}} / {{signOutTime}}
+    </view>
+  </view>
+
+  <view class="zan-row">
+    <view class="zan-col zan-col-12">
+      作业完成数 / 作业总数
+    </view>
+    <view class="zan-col zan-col-12">
+      {{taskTotalDoneCount}} / {{taskTotalCount}}
+    </view>
+  </view>
+
+  <view class="zan-row ">
+    <view class="zan-col zan-col-12  ">
+      获得积分
+    </view>
+    <view class="zan-col zan-col-12 ">
+      {{addCreditDaily+decudtCreditDaily}}
+    </view>
+  </view>
+
+  <view class="zan-row ">
+    <view class="zan-col zan-col-12 ">
+      剩余积分
+    </view>
+    <view class="zan-col zan-col-12 ">
+      {{totalCredit}}
+    </view>
+  </view>
+
+  <view class="zan-row ">
+    <view class="zan-col zan-col-12  ">
+      阅读时长
+    </view>
+    <view class="zan-col zan-col-12 ">
+      {{readingDuration}} 分钟
+    </view>
+  </view>
+
+  <view class="zan-row ">
+    <view class="zan-col zan-col-12 zan-hairline--bottom ">
+      签退人
+    </view>
+    <view class="zan-col zan-col-12 zan-hairline--bottom">
+      {{pickupParent}}
+    </view>
+  </view>
+
+  <block wx:if="{{addCreditLog.length > 0}}">
+    <view class="zan-panel-title">奖分原因</view>
+    <view class="zan-row" wx:for="{{addCreditLog}}" wx:key="unique">
+      <view class=" zan-col zan-col-24 {{index==addCreditLog.length-1 ? 'zan-hairline--bottom':''}}">
+        {{item.reason}}
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{decudtCreditLog.length > 0}}">
+    <view class="zan-panel-title">扣分原因</view>
+    <view class="zan-row" wx:for="{{decudtCreditLog}}" wx:key="unique">
+      <view class=" zan-col zan-col-24 {{index==decudtCreditLog.length-1 ? 'zan-hairline--bottom':''}}">
+        {{item.reason}}
+      </view>
+    </view>
+  </block>
+
+  <view class="zan-panel-title">作业信息</view>
+  <view class="jd-homework" wx:for="{{taskList}}" wx:key="unique">
+    <view class="zan-row" id='{{item.taskId}}' catchtap='onInnerTask'>
+      <view class="zan-col zan-col-24">
+        {{item.subject}} {{item.textbook}} {{item.scope}}{{item.scopeUnit}} {{item.isExtraWork == 1? '课外':''}}{{item.item}} {{tools.whereDoneDesc[item.whereDone]}}{{item.finishTime}} 错题数:{{item.errorCount}}{{item.remark != undefined ?item.remark:''}} {{item.uploadPath.length
+        > 0 ? '照片数量:'+item.uploadPath.length:''}}
+      </view>
+    </view>
+  </view>
+
+
+</template>

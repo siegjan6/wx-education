@@ -1,0 +1,5 @@
+<import src='isSignOut0.wxml' />
+<import src='isSignOut1.wxml' />
+<import src='isSignOut2.wxml' />
+<template is="isSignOut{{isSignOut}}" data="{{...info}}" />
+<!-- isExtraWork -->

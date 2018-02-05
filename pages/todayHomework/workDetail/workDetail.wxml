@@ -1,0 +1,15 @@
+<!--pages/shop/shop.wxml-->
+<view class="container">
+  <view class="doc-title zan-hairline--bottom">PHOTO</view>
+
+  <view class="zan-panel">
+    <view wx:for="{{ taskItem.uploadPath }}" wx:key="unique" class="zj-wrap">
+      <image class="zj-img"   src="{{imgUrl+'/'+item.path}}" data-index="{{item.picId}}" bindtap="previewImage"></image>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class="zan-row">
+  <image wx:for="{{pictures}}" wx:key="unique" src="{{item}}" data-index="{{index}}" bindtap="previewImage"></image>
+</view> -->

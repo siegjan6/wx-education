@@ -1,0 +1,47 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading" />
+    <text class="loading-text">玩命加载中...</text>
+  </view>
+</block>
+<block wx:else>
+  <scroll-view style="height: 100%;" scroll-y="true" class="container film-list" bindscroll="scroll" bindscrolltolower="scrolltolower">
+    <block wx:for-items="{{films}}" wx:for-item="film">
+      <view class="film-item" bindtap="viewDetail" data-id="{{film.id}}" data-title="{{film.title}}">
+        <view class="film-image">
+          <!-- <image src="../image/bg_rating.png"></image>  -->
+          <image src="{{film.images.medium}}"></image>
+        </view>
+        <view class="film-info">
+          <view class='film-first'>
+            <view>
+              <text class="film-title">{{film.name}}</text>
+            </view>
+            <!-- <view class='.film-first-right'>
+                 <text class="pingfen">评分</text>
+                 <text class="rating">{{film.rating.average}}</text>
+            </view> -->
+          </view>
+
+          <view class="directors" style='margin-top:10px'>
+            <block wx:for-items="{{film.detail}}" wx:for-item="v">
+              <text class="person">{{v}}</text>
+              <br/>
+            </block>
+          </view>
+          <!-- <view class="casts">
+            <text class="label">主演</text>
+            <block wx:for-items="{{film.casts}}" wx:for-item="cast">
+              <text class="person">{{cast.name}}</text>
+            </block>
+          </view> -->
+        </view>
+      </view>
+    </block>
+    <view class="load-more-wrap">
+      <view class="load-content">
+        <text>更多课程请店内咨询</text>
+      </view>
+    </view>
+  </scroll-view>
+</block>
