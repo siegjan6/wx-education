@@ -1,14 +1,122 @@
 <import src='templdate.wxss' />
+<wxs src="./tools.wxs" module="tools" />
 <template name="student">
-  <form bindsubmit="submitInfo"  id="{{stdId}}" report-submit='true'>
-    <button class='studentCard' form-type="submit" type="default" size="mini">
-      {{name}} </button>
+  <form bindsubmit="submitInfo" id="{{stdId}}" report-submit='true'>
+    <view class='homeworkLi'>
+      <view class='stuName'>
+        <view>
+          <image src="https://www.jdyeducation.com/images/head.jpg"></image>
+        </view>
+        <!-- <text>{{name}}</text>  -->
+        <button form-type="submit" type="default" size="mini">{{name}}</button>
+
+      </view>
+      <block wx:if='{{isSignOut == 2}}'>
+        <view class='liCon'>
+          <view>
+            <text></text>
+            <text></text>
+            <text></text>
+          </view>
+        </view>
+        <view class='liCon'>
+          <view>
+            <text>状态：未签到</text>
+            <text>年级：{{grade}}</text>
+            <text>学校：{{school}}</text>
+          </view>
+        </view>
+      </block>
+      <block wx:elif='{{isSignOut == 0}}'>
+        <view class='liCon'>
+          <view>
+            <text>签到时间：{{info.signInTime}}</text>
+            <text>得分：{{info.totalCreditDaily}}</text>
+            <text>总积分：{{info.availableCredit}}</text>
+          </view>
+        </view>
+        <view class='liCon'>
+          <view>
+            <text>状态：学习中</text>
+            <text>年级：{{grade}}</text>
+            <text>作业完成数/总数：{{info.taskTotalDoneCount}}/{{info.taskTotalCount}}</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='liCon '>
+          <view>
+            <text>接送人：</text>
+            <text>签到时间：</text>
+            <text>签退时间：</text>
+          </view>
+          <view>
+            <text>{{info.pickupParent}}</text>
+            <text>{{info.signInTime}}</text>
+            <text>{{info.signOutTime}}</text>
+          </view>
+        </view>
+        <view class='liCon '>
+          <view>
+            <text>阅读时间：</text>
+            <text>得到积分：</text>
+            <text>作业完成数/总数：</text>
+          </view>
+          <view>
+            <text>{{readingTimeDuration}}</text>
+            <text>{{info.availableCredit}}</text>
+            <text>{{info.taskTotalDoneCount}}/{{info.taskTotalCount}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
   </form>
-  <!-- <view class='studentCard' id="{{stdId}}" bind:tap="onStudentDetal">
-    <text class='studentCard-name'> {{name}} </text>
-    <text class='studentCard-school'> {{school}} </text>
-    <text class='studentCard-grade'> {{grade}} </text>
-  </view> -->
+  <block wx:if='{{isSignOut==1}}'>
+
+    <scroll-view scroll-x>
+      <view class='homeworkDetail' wx:for='{{info.taskList}}' wx:for-item="taskItem" wx:key="unique">
+        <swiper wx:if='{{taskItem.uploadPath.length != 0}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{taskItem.uploadPath}}" wx:key="unique">
+            <swiper-item class='' catchtap='onCatchtap'  data-stdid='{{stdId}}' data-taskId='{{taskItem.taskId}}' id='{{item.picId}}'>
+              <image class='homeworkImgImage' mode='aspectFill' lazy-load='{{true}} ' src="https://www.jdyeducation.com/images/{{item.path}}" />
+            </swiper-item>
+          </block>
+          <text class='photolength'>{{taskItem.uploadPath.length}}张</text>
+        </swiper>
+        <view class='detailContent'>
+          <view class='detailTitle'>{{taskItem.subject}}</view>
+          <view class='detailLi'>
+            <text>项目</text>
+            <text>{{taskItem.item}}</text>
+          </view>
+          <view class='detailLi'>
+            <text>教材</text>
+            <text>{{taskItem.textbook}}</text>
+          </view>
+          <view class='detailLi'>
+            <text>范围</text>
+            <text>{{taskItem.scope + taskItem.scopeUnit}}</text>
+          </view>
+          <view class='detailLi'>
+            <text>完成方式</text>
+            <text>{{tools.whereDoneDesc[taskItem.whereDone]}}</text>
+          </view>
+          <view class='detailLi'>
+            <text>完成时间</text>
+            <text>{{taskItem.finishTime}}</text>
+          </view>
+          <view class='detailLi'>
+            <text>错误数</text>
+            <text>{{taskItem.errorCount}}</text>
+          </view>
+          <view class='detailLi' wx:if='{{taskItem.remark != ""}}'>
+            <text>备注</text>
+            <text>{{taskItem.remark}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </block> 
 </template>
 
 <!-- {"stdId":0,"grade":"一年级","availableCredit":43,"clasBelongs":"[晚托班]一班","sex":"男","enrollDate":"2017-07-01 00:00:00","portrait":"default","readingTimeDuration":1588,"source":"他人介绍","isRequiredDinner":false,"gradeDictId":16,"status":true,"school":"三林小学","stdNo":"001","remark":null,"name":"周小建","schoolDictId":2,"sourceDictId":0,"clasBelongsIds":[{"id":0,"name":"[晚托班]一班"}],"relaxTimeDuration":0,"totalCredit":43,"sexDictId":4,"clas":"二班"} -->

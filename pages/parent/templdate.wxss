@@ -10,7 +10,6 @@
   width: 90%;
   line-height: 50px;
 }
- 
 
 .studentCard-name {
   position: absolute;

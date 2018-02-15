@@ -3,9 +3,19 @@
 }
 
 .student-back {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+
+.student-back .student-back-header {
   width: 100%;
   height: 26vh;
-  background: url('https://www.jdyeducation.com/images/student-back.jpg');
+  background: url('https://www.jdyeducation.com/images/teacher-back.png');
+  position: relative;
 }
 
 .userinfo-name {
@@ -17,15 +27,18 @@
 
 .bind-btn {
   position: absolute;
-  right: 20px;
-  top: 90px;
-  width: 95px;
-  height: 22px;
+  right: 9vw;
+  top: 50%;
+  margin-top: -6.5vw;
+  height: 7vw;
+  line-height: 7vw;
   color: white;
   border: 1px solid white;
   text-align: center;
-  font-size: 15px;
+  font-size: 3.8vw;
   border-radius: 5px;
+  padding: 0 1.2vw;
+  opacity: 0.7;
 }
 
 .userinfo-avatar {
@@ -34,23 +47,46 @@
   margin: 20rpx;
   border-radius: 50%;
   position: absolute;
-  top: 50px;
+  top: 50%;
+  margin-top: -64rpx;
   left: 20px;
   /* z-index: 999; */
 }
 
 .cards {
-  position: relative;
-  top: 29vh;
-  /* height: 50vh; */
+  /* position: relative;
+  top: 32vh; *//* height: 50vh; */
   border: 1px solid white;
+  position: absolute;
+  top: 32vh;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  bottom: 0px;
+  overflow: auto;
 }
 
 .query-view {
-  position: relative;
-  top: 27vh;
-  left: 20px;
   /* width:40vh; *//* background-color: whitesmoke; *//* border: 1px solid white; *//* border-radius: 5px; */
+  position: absolute;
+  background-color: white;
+  padding: 2.5vw 6vw;
+  height: 7vw;
+  font-size: 3.7vw;
+  bottom: 0px;
+  margin-bottom: -6.05vw;
+  border-radius: 7px;
+  width: 70vw;
+  margin-left: -41vw;
+  left: 50%;
+  display: flex;
+  box-shadow: 0 3px 3px #dfdfdf;
+}
+
+.query-view>text:first-child {
+  margin: auto;
+  margin-left: 0px;
+  margin-right: 5px;
 }
 
 .picker {
@@ -58,3 +94,227 @@
   color: #e76e4f;
 }
 @import "templdate.wxss";
+
+.query-view>picker {
+  display: inline-block;
+  margin: auto;
+  margin-left: 0px;
+}
+
+.query-view>.searchWork {
+  color: white;
+  background-color: #e76e4f;
+  padding: -1vw 3vw;
+  border-radius: 8px;
+  font-size: 3vw;
+  margin: auto;
+  margin-right: 0px; 
+}
+
+.homeworkLi {
+  display: flex;
+  font-size: 3vw;
+  position: relative;
+  width: 94vw;
+  margin: auto;
+  border-radius: 7px;
+  margin-top: 9vw;
+  box-shadow: 0 0 10px #dfdfdf;
+  background-color: white;
+}
+
+.cards>.homeworkLi:last-child {
+  margin-bottom: 3vw;
+}
+
+.stuName {
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: -6vw;
+  left: 4vw;
+}
+
+.stuName>view {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 7.5vw;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.stuName>button {
+  width: 18vw;
+  /* height:12vw; *//* border-radius:7.5vw; */
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+  top: 0px;
+  left: -2vw;
+  background: transparent; /*完全透明*/
+  opacity: 0.9; /*整个按钮的不透明度，会影响到文字，0完全透明，1完全不透明*/
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stuName>view>image {
+  width: 12vw;
+  height: 12vw;
+}
+
+.liCon {
+  margin: 1vw auto;
+  display: flex;
+}
+
+.homeworkLi>view:nth-child(2) {
+  margin-left: 23vw;
+}
+
+.liCon>view {
+  margin: auto;
+}
+
+.liCon>view>text {
+  display: block;
+  margin: 2vw 0px;
+}
+
+.liCon>view:first-child>text {
+  text-align: right;
+}
+
+.liCon>view:last-child>text {
+  text-align: left;
+}
+
+.liCon:last-child>view {
+  margin-top: 0px;
+}
+
+.liCon:last-child {
+  margin-left: 0px;
+}
+
+.student-header-info {
+  display: flex;
+  position: absolute;
+  left: 9vw;
+  top: 50%;
+  margin-top: -13vw;
+}
+
+.student-header-info>view:first-child {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 10vw;
+  overflow: hidden;
+}
+
+.student-header-info>view:first-child>image {
+  width: 20vw;
+  height: 20vw;
+}
+
+.student-header-info>view:last-child {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.5vw;
+}
+
+.student-header-info>view>.studentName {
+  margin: auto;
+  font-size: 4.5vw;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.student-header-info>view>.parentName {
+  margin: auto;
+  font-size: 3.4vw;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.homeworkDetail {
+  width: 90vw;
+  box-shadow: 0 0 10px #dfdfdf;
+  background-color: white;
+  margin: auto;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding-bottom: 5vw;
+}
+
+.cards>.homeworkDetail:last-child {
+  margin-bottom: 3vw;
+}
+
+.detailSpot {
+  height: 7vw;
+  text-align: center;
+  line-height: 7vw;
+}
+
+.detailSpot>text {
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: #b3b3b3;
+  display: inline-block;
+  border-radius: 0.75vw;
+  margin: 0px 1.5vw;
+  vertical-align: middle;
+}
+
+.detailSpot>text.active {
+  background-color: #e76e4f;
+}
+
+.homeworkImg {
+  position: relative;
+  margin: 5px;
+}
+
+.photolength {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 0px 8px;
+  bottom: 4vw;
+  right: 4vw;
+  font-size: 3.2vw;
+  border-radius: 3px;
+  border: 1px solid;
+}
+
+.homeworkImgImage {
+  width: 90vw;
+  height: 55vw;
+  border-radius: 7px;
+}
+
+.detailContent {
+  width: 70vw;
+  margin: auto;
+  font-size: 3.5vw;
+}
+
+.detailContent>.detailTitle {
+  border-bottom: 1px solid #e76e4f;
+  text-align: center;
+  font-size: 5vw;
+  padding-bottom: 1.5vw;
+  margin-top: 2vw;
+}
+
+.detailContent>.detailLi {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  margin-top: 4vw;
+  padding-bottom: 1.5vw;
+}
+
+.detailContent>.detailLi>text:first-child {
+  width: 31vw;
+  text-align: center;
+}

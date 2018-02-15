@@ -1,0 +1,3 @@
+module.exports = {
+  whereDoneDesc: ['当堂完成', '在校完成', '回家完成']
+};

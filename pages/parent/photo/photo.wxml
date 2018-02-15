@@ -1,0 +1,2 @@
+<!-- canvas.wxml style="width: 400px; height: 500px;"-->
+<canvas style='width:100%;height:{{width>height? width*scaleP:height*scaleP}}px' canvas-id="firstCanvas" binderror="canvasIdErrorCallback"></canvas>

@@ -4,16 +4,29 @@
 
   <view class="container">
     <!-- form 中使用 Field -->
-    <view class="zan-panel-title">基本信息</view>
+    <!-- <view class="zan-panel-title">基本信息</view> -->
     <form bindsubmit="formSubmit" bindreset="formReset">
-      <view class="zan-panel">
+      <!-- <view class="zan-panel">
         <template is="zan-field" data="{{ ...config.form.name }}"></template>
         <template is="zan-field" data="{{ ...config.form.tel }}"></template>
         <template is="zan-field" data="{{ ...config.form.detail }}"></template>
         <view class="zan-btns">
           <button class="jd-button" formType="submit">提 交</button>
         </view>
+      </view> -->
+      <view class='submitInfo'>
+        <view class='infoKey'>
+          <text>学生姓名：</text>
+          <text>家长电话：</text>
+          <text>留言：</text>
+        </view>
+        <view class='infoValue'>
+          <input></input>
+          <input></input>
+          <textarea></textarea>
+        </view>
       </view>
+      <button class="jd-button" formType="submit">提 交</button>
     </form>
 
   </view>

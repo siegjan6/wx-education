@@ -1,7 +1,7 @@
 .jd-index {
   width: 100%;
-  height: 250px;
   border-radius: 5px;
+  max-height: 30vh;
 }
 
 .jd-button {
@@ -9,4 +9,67 @@
   background-color: #e76e4f;
   color: white;
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; *//* height:5vh; */
+  margin-top: 10vw;
+  width: 40vw;
+  font-size: 4vw;
 }
+
+.jd-view{
+  width:95vw;
+  height:90vh;
+  margin:auto;
+  overflow:hidden;
+  box-shadow: 0 0 10px #666;
+  border-radius: 5px;
+}
+.container{
+  background-color: white;
+  overflow: auto;
+  min-height: unset;
+}
+.submitInfo{
+  display:flex;
+  font-size:3.7vw;
+  width:84vw;
+  margin:auto;
+}
+.submitInfo>.infoKey{
+  display:flex;
+  flex-direction:column;
+  width:20vw;
+}
+.submitInfo>.infoKey>text{
+  height: 8vw;
+  line-height: 8vw;
+  margin: 2vw auto;
+}
+.submitInfo>.infoKey>text:last-child{
+  line-height: 6vw;
+}
+.submitInfo>.infoValue{
+  display:flex;
+  flex-direction:column;
+  width:64vw;
+}
+.submitInfo>.infoValue>input{
+  border: 1px solid #808080;
+  border-radius: 5px;
+  width: 64vw;
+  height: 8vw;
+  margin: 2vw auto;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+.submitInfo>.infoValue>textarea{
+  border: 1px solid #808080;
+  border-radius: 5px;
+  width: 64vw;
+  height: 30vw;
+  margin-top: 2vw;
+  padding: 2vw;
+  box-sizing: border-box;
+}
+.submitInfo>.infoValue>input:hover, .submitInfo>.infoValue>textarea:hover{
+  border: 1px solid #e76e4f;
+}
+

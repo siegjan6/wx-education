@@ -9,7 +9,8 @@
     "pages/table/table",
     "pages/index/messageing/messageing",
     "pages/todayHomework/workDetail/workDetail",
-    "pages/todayHomework/wx-cropper/index"
+    "pages/todayHomework/wx-cropper/index",
+    "pages/parent/photo/photo"
   ],
   "window": {
     "backgroundTextStyle": "light",

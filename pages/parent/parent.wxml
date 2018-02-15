@@ -1,26 +1,58 @@
 <import src="templdate.wxml" />
 <view class="container">
   <view class="student-back">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <view class='userinfo-name' wx:if='{{userInfo != undefined}}'>
-      {{userInfo.nickName}}
-    </view>
+    <view class='student-back-header'>
+      <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class='userinfo-name' wx:if='{{userInfo != undefined}}'>
+        {{userInfo.nickName}}
+      </view> -->
+      <view class='student-header-info'>
+        <view>
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view>
+          <text class='studentName'>{{userInfo.nickName}}</text>
+          <text class='parentName'>家长</text>
+        </view>
+      </view>
+      <block wx:if="{{flag == 0}}">
+        <text class='bind-btn' bind:tap="onBindMobile">绑定手机</text>
+      </block>
+      <block wx:else>
+        <text class='bind-btn' bind:tap="onBindMobile">更改号码</text>
+        <form bindsubmit="submitInfo" report-submit='true'>
+          <view class='query-view'>
+            <text>查询作业 |</text>
+            <picker mode="date" value="{{date}}" start="2018-01-01" end="{{nowDate}}" bindchange="bindDateChange">
+              <view class="picker">
+                {{date}}
+              </view>
+            </picker>
 
+            <button class="searchWork" form-type="submit" type="default">查询</button>
+            <!-- <text class="searchWork">查询</text> -->
+          </view>
+        </form>
+      </block>
+    </view>
     <block wx:if="{{flag == 0}}">
-      <text class='bind-btn' bind:tap="onBindMobile">绑定手机</text>
+      <!-- <text class='bind-btn' bind:tap="onBindMobile">绑定手机</text>  -->
+      <view></view>
     </block>
     <block wx:else>
-      <text class='bind-btn' bind:tap="onBindMobile">更改号码</text>
+      <!-- <text class='bind-btn' bind:tap="onBindMobile">更改号码</text>
       <view class='query-view'>
-        <picker mode="date" value="{{date}}" start="2018-01-01" end="{{nowDate}}" bindchange="bindDateChange">查询作业 |
+        <text>查询作业 |</text>
+        <picker mode="date" value="{{date}}" start="2018-01-01" end="{{nowDate}}" bindchange="bindDateChange">
           <view class="picker">
             {{date}}
           </view>
-        </picker> 
-      </view>
+        </picker>
+        <text class="searchWork">查询</text> 
+      </view> -->
       <view class='cards'>
         <block wx:for="{{studentList}}" wx:key="unique">
-          <template is="student" data="{{...item}}" />
+          <template wx:if='{{stdItems[item.stdId] != undefined}}' is="student" data="{{...item,...stdItems[item.stdId]}}" />
         </block>
       </view>
     </block>

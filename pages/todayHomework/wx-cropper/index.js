@@ -5,49 +5,92 @@ const utils = require('../../../utils/util.js');
 const autoImage = require('autoImage.js');
 
 let picId = -1;
+let isDrag = false;
+let initScroll = {
+  offsetLeft: 0,
+  offsetTop: 0
+};
+let initMouse = {
+  x: 0,
+  y: 0
+}
 Page({
   /**
    * 页面的初始数据
    */
   data: {
     path: 'https://www.jdyeducation.com/images/index.jpg',
-    isShowImg: true,
-
-    // 图片缩放值
-    scaleP: 0
+    width: 100,//图片宽高
+    height: 100
   },
-  cusImageLoad: function (e) {
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
     var that = this;
-    that.setData(autoImage.wxAutoImageCal(e.detail.width, e.detail.height)); 
+    picId = options.picId;
     const data = {
       token: app.globalData.token,
       picId: picId
     }
     utils.get('/std/image_task_error', data, (res) => {
       res.data.data.path = imgUrl + res.data.data.path;
-      res.data.data.errorList = res.data.data.errorList.map((item) => {
-        let result = autoImage.wxAutoErrorFlag(item.errorX, item.errorY, that.data.scaleP); console.log(result)
-        return { ...item, errorX: result.w, errorY: result.h };
-      })
+      // res.data.data.errorList = res.data.data.errorList.map((item) => {
+      //   let result = autoImage.wxAutoErrorFlag(item.errorX, item.errorY, that.data.scaleP);  
+      //   return { ...item, errorX: result.w, errorY: result.h };
+      // })
       that.setData({
         ...that.data,
-        ...res.data.data,
+        ...res.data.data
       });
-      console.log('errorFlag', res)
+      wx.getImageInfo({
+        // src: that.data.path,
+        src: 'https://www.jdyeducation.com/images/index.jpg',
+        success: function (res) {
+          that.setData({
+            ...that.data,
+            width: res.width,
+            height: res.height
+          });
+          that.draw();
+        },
+        fail: function (res) {
+          console.log(res);
+        }
+      })
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    picId = options.picId;
-  },
+  draw: function () {
+    var context = wx.createCanvasContext('myCanvas')
 
+    context.drawImage(this.data.path, 0, 0, this.data.width, this.data.height)
+    context.draw()
+  },
+  bindtouchstart: function (event) { 
+    if (event.touches.length == 1) {
+      isDrag = true;
+      initScroll = {
+        offsetLeft: event.target.offsetLeft,
+        offsetTop: event.target.offsetTop
+      }
+      initMouse = {
+        x: event.touches[0].x,
+        y: event.touches[0].y
+      }
+    }
+    console.log(...arguments);
+  },
+  bindtouchmove: function (event) {
+
+  },
+  bindtouchend: function (event) {
+    isDrag = false;
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.draw();
   },
 
 
