@@ -10,12 +10,17 @@
     <view class='jd-text-right'>松江区泗泾镇江川北路321号晶尚坊二期11号</view>
     <view class="arrow" />
   </view>
-   <view class='jd-row' catchtap='phone'>
-    <view class='jd-text-left'>联系:</view>
-    <view class='jd-text-right' >15316663631</view>
+  <view class='jd-row' catchtap='phone'>
+    <view class='jd-text-left'>联系：</view>
+    <view class='jd-text-right'>陆老师   15316663631</view>
     <view class="arrow" />
   </view>
-  <button catchtap='onMessageing' class='jd-button'>报  名</button>
+  <view class='jd-row' catchtap='phone'>
+    <view class='jd-text-left'></view>
+    <view class='jd-text-right'>胡老师  13641794834</view>
+    <view class="arrow" />
+  </view>
+  <button catchtap='onMessageing' class='jd-button'>报 名</button>
 </view>
 
 <!-- zan-c-black zan-font-bold zan-font-22 zan-hairline--bottom -->

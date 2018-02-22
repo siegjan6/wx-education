@@ -3,7 +3,7 @@ var localData =
     "subjects": [
       {
         "images": {
-          "medium": "https://www.jdyeducation.com/images/head.jpg"
+          "medium": "https://www.jdyeducation.com/images/head.png"
         },
         name: '邵坚磊',
         teacher: '英语老师',
@@ -11,7 +11,7 @@ var localData =
       },
       {
         "images": {
-          "medium": "https://www.jdyeducation.com/images/head.jpg"
+          "medium": "https://www.jdyeducation.com/images/head.png"
         },
         name: '邵坚磊',
         teacher: '英语老师',

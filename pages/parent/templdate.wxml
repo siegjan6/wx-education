@@ -5,7 +5,7 @@
     <view class='homeworkLi'>
       <view class='stuName'>
         <view>
-          <image src="https://www.jdyeducation.com/images/head.jpg"></image>
+          <image src="https://www.jdyeducation.com/images/head.png"></image>
         </view>
         <!-- <text>{{name}}</text>  -->
         <button form-type="submit" type="default" size="mini">{{name}}</button>

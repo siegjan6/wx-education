@@ -3,7 +3,7 @@ var localData =
     "subjects": [
       {
         "images": {
-          "medium": "https://www.jdyeducation.com/images/head.jpg"
+          "medium": "https://www.jdyeducation.com/images/head.png"
         },
         name: '毛笔书法',
         detail: ['小学升初中特长生参考科目：毛笔书法。',
@@ -13,21 +13,21 @@ var localData =
       },
       {
         "images": {
-          "medium": "https://www.jdyeducation.com/images/head.jpg"
+          "medium": "https://www.jdyeducation.com/images/head.png"
         },
         name: '语文课程',
         detail: ['是一门博大精深的学科，需要有学习兴趣，好的学习习惯等都是很重要的。学好语文课程，要注意培养学习兴趣，养成好的学习习惯，积累学习方法，增强学习能力等。']
       },
       {
         "images": {
-          "medium": "https://www.jdyeducation.com/images/head.jpg"
+          "medium": "https://www.jdyeducation.com/images/head.png"
         },
         name: '逻辑思维',
         detail: ['逻辑思维，又称抽象思维，是人的理性认识阶段，人运用概念、判断、推理等思维类型反映事物本质与规律的认识过程。']
       },
       {
         "images": {
-          "medium": "https://www.jdyeducation.com/images/head.jpg"
+          "medium": "https://www.jdyeducation.com/images/head.png"
         },
         name: 'CRM系统课',
         detail: ['涉及用友U8+移动办公的移动销售、营销、服务、审批是四大部分，另外还涵盖了用友CRM系统的部分使用；']

@@ -74,16 +74,21 @@ Page({
   },
   phone: function () {
     wx.makePhoneCall({
-      phoneNumber: '18964856936',
+      phoneNumber: '15316663631',
+    })
+  },
+  phone2: function () {
+    wx.makePhoneCall({
+      phoneNumber: '13641794834',
     })
   },
   click: function (e) {
     wx.openLocation({
-      latitude: 31.159250,
-      longitude: 121.494570,
+      latitude: 31.116980,
+      longitude: 121.272610,
       scale: 18,
       name: '君德教育',
-      address: '松江新城123号'
+      address: '江川北路321号晶尚坊二期11号'
     })
   },
   onMessageing: function () {

@@ -40,3 +40,18 @@ App({
   3、请自行修改上面几处的模板消息ID，参数为您自己的变量设置即可。  
    */
 })
+
+
+
+// {
+//   "pagePath": "pages/teacher/teacher",
+//     "iconPath": "assets/img/teacher.png",
+//       "selectedIconPath": "assets/img/teacher1.png",
+//         "text": "名师"
+// },
+// {
+//   "pagePath": "pages/table/table",
+//     "iconPath": "assets/img/table.png",
+//       "selectedIconPath": "assets/img/table1.png",
+//         "text": "课程"
+// },
