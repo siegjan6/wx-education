@@ -1,4 +1,6 @@
 // pages/index/index.js
+const app = app || getApp();
+const utils = require('../../utils/util.js');
 Page({
 
   /**
@@ -91,9 +93,25 @@ Page({
       address: '江川北路321号晶尚坊二期11号'
     })
   },
-  onMessageing: function () {
-    wx.navigateTo({
-      url: 'messageing/messageing',
+  onMessageing: function (e) {
+    let that = this; 
+
+    let data = {
+      token: app.globalData.token,
+      page: 'pages/index/index',
+      formId: e.detail.formId
+    }
+    utils.post('/std/sub_sign_info', data, (res) => {
+      console.log(res)
+      wx.navigateTo({
+        url: './../parent/parent',
+        fail:function(){
+          console.log(...arguments)
+        }
+      })
     })
+    // wx.navigateTo({
+    //   url: 'messageing/messageing',
+    // })
   }
 })

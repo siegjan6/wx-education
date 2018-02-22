@@ -12,15 +12,20 @@
   </view>
   <view class='jd-row' catchtap='phone'>
     <view class='jd-text-left'>联系：</view>
-    <view class='jd-text-right'>陆老师   15316663631</view>
+    <view class='jd-text-right'>陆老师 15316663631</view>
     <view class="arrow" />
   </view>
   <view class='jd-row' catchtap='phone'>
     <view class='jd-text-left'></view>
-    <view class='jd-text-right'>胡老师  13641794834</view>
+    <view class='jd-text-right'>胡老师 13641794834</view>
     <view class="arrow" />
   </view>
-  <button catchtap='onMessageing' class='jd-button'>报 名</button>
+  <form bindsubmit="onMessageing" report-submit='true'>
+  <view class='query-view'>
+    <button class='jd-button' form-type="submit" type="default">家 长 进 入</button>
+  </view>
+  </form>
+  <!-- <button catchtap='onMessageing' >报 名</button> -->
 </view>
 
 <!-- zan-c-black zan-font-bold zan-font-22 zan-hairline--bottom -->

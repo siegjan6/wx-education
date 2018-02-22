@@ -43,6 +43,20 @@
   top: 5px;
 }
 
+
+.query-view>picker {
+  display: inline-block;
+  margin: auto;
+  margin-left: 0px;
+}
+
+.query-view>.jd-button {
+  margin-top: 50px;
+  width:30vh;
+  background-color: #E76E4F;
+  color:white;
+}
+
 .jd-button{
   margin-top: 50px;
   width:30vh;

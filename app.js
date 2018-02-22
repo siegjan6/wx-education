@@ -43,15 +43,36 @@ App({
 
 
 
-// {
-//   "pagePath": "pages/teacher/teacher",
-//     "iconPath": "assets/img/teacher.png",
-//       "selectedIconPath": "assets/img/teacher1.png",
-//         "text": "名师"
-// },
-// {
-//   "pagePath": "pages/table/table",
-//     "iconPath": "assets/img/table.png",
-//       "selectedIconPath": "assets/img/table1.png",
-//         "text": "课程"
-// },
+// "tabBar": {
+//   "color": "#6e6d6b",
+//     "selectedColor": "#e64330",
+//       "borderStyle": "white",
+//         "backgroundColor": "#fff",
+//           "box-shadow": "0 0 6px 0",
+//             "list": [
+//               {
+//                 "pagePath": "pages/index/index",
+//                 "iconPath": "assets/img/home.png",
+//                 "selectedIconPath": "assets/img/home1.png",
+//                 "text": "君德"
+//               },
+//               {
+//                 "pagePath": "pages/teacher/teacher",
+//                 "iconPath": "assets/img/teacher.png",
+//                 "selectedIconPath": "assets/img/teacher1.png",
+//                 "text": "名师"
+//               },
+//               {
+//                 "pagePath": "pages/table/table",
+//                 "iconPath": "assets/img/table.png",
+//                 "selectedIconPath": "assets/img/table1.png",
+//                 "text": "课程"
+//               },
+//               {
+//                 "pagePath": "pages/parent/parent",
+//                 "iconPath": "assets/img/student.png",
+//                 "selectedIconPath": "assets/img/student1.png",
+//                 "text": "学生"
+//               }
+//             ]
+// }
