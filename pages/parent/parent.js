@@ -22,7 +22,11 @@ Page({
   onLoad: function (options) {
   },
   bindDateChange: function (e) {
-    this.data.date = e.detail.value;
+    let that = this;
+    that.data.date = e.detail.value;
+    that.setData({
+      ...that.data
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

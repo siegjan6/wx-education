@@ -65,7 +65,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: app.globalData.shareProfile,
-      path: '/pages/start/start',
+      path: '/pages/index/index',
       success: function (res) {
         // 转发成功
       },

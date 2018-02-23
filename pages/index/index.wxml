@@ -15,7 +15,7 @@
     <view class='jd-text-right'>陆老师 15316663631</view>
     <view class="arrow" />
   </view>
-  <view class='jd-row' catchtap='phone'>
+  <view class='jd-row' catchtap='phone2'>
     <view class='jd-text-left'></view>
     <view class='jd-text-right'>胡老师 13641794834</view>
     <view class="arrow" />
