@@ -2,7 +2,7 @@
   <image class="jd-index" src="https://www.jdyeducation.com/images/index.jpg"></image>
   <view class='jd-row'>
     <view class='jd-text-left'>简介:</view>
-    <view class='jd-text-right'>君德教育创始人怀着对教育的尊重和热爱，以极富前瞻性的视野投身于教育，将其作为两大事业平台之一。乐成教育致力于提供高品质的国际教育，成为中国基础教育国际化的探索先锋。 乐成教育管理有限公司是乐成集团下属全资子公司，全面负责乐成教育事业的投资和发展，立志于为中国的教育创新提供专业支持与服务。
+    <view class='jd-text-right'>君德教育创始人怀着对教育的尊重和热爱，以极富前瞻性的视野投身于教育，将其作为两大事业平台之一。君德教育致力于提供高品质的国际教育，成为中国基础教育国际化的探索先锋。 君德教育管理有限公司是君德集团下属全资子公司，全面负责君德教育事业的投资和发展，立志于为中国的教育创新提供专业支持与服务。
     </view>
   </view>
   <view class='jd-row' catchtap='click'>

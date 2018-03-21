@@ -39,7 +39,7 @@
       </view> 
     </view>
 
-    <button class="load-content" open-type="contact" >客服</button>
+    <button class="load-content" open-type="contact" >联系客服</button>
     <!-- <view class="load-more-wrap">
         <view class="load-content">
           <text>报 名</text>
