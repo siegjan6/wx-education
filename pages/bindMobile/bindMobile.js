@@ -100,7 +100,7 @@ Page({
       } else {
         wx.showModal({
           title: res.data.code.toString(),
-          content: res.data.comment
+          content: '您的手机号未登记,请与君德校方联系'
         })
       }
     })

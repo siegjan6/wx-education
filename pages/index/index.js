@@ -83,6 +83,11 @@ Page({
     wx.makePhoneCall({
       phoneNumber: '13641794834',
     })
+  }, 
+  phone3: function () {
+    wx.makePhoneCall({
+      phoneNumber: '67898163',
+    })
   },
   click: function (e) {
     wx.openLocation({
@@ -90,11 +95,11 @@ Page({
       longitude: 121.272610,
       scale: 18,
       name: '君德教育',
-      address: '江川北路321号晶尚坊二期11号'
+      address: '江川北路327弄9号'
     })
   },
   onMessageing: function (e) {
-    let that = this; 
+    let that = this;
 
     let data = {
       token: app.globalData.token,
@@ -105,7 +110,7 @@ Page({
       console.log(res)
       wx.navigateTo({
         url: './../parent/parent',
-        fail:function(){
+        fail: function () {
           console.log(...arguments)
         }
       })

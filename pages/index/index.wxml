@@ -2,12 +2,12 @@
   <image class="jd-index" src="https://www.jdyeducation.com/images/index.jpg"></image>
   <view class='jd-row'>
     <view class='jd-text-left'>简介:</view>
-    <view class='jd-text-right'>君德教育创始人怀着对教育的尊重和热爱，以极富前瞻性的视野投身于教育，将其作为两大事业平台之一。君德教育致力于提供高品质的国际教育，成为中国基础教育国际化的探索先锋。 君德教育管理有限公司是君德集团下属全资子公司，全面负责君德教育事业的投资和发展，立志于为中国的教育创新提供专业支持与服务。
+    <view class='jd-text-right'>君德教育创始人怀着对教育的尊重和热爱，以极富前瞻性的视野投身于教育，将其作为两大事业平台之一。君德教育致力于提供高品质的国际教育，成为中国基础教育国际化的探索先锋。全面负责君德教育事业的投资和发展，立志于为中国的教育创新提供专业支持与服务。
     </view>
   </view>
   <view class='jd-row' catchtap='click'>
     <view class='jd-text-left'>地址:</view>
-    <view class='jd-text-right'>松江区泗泾镇江川北路321号晶尚坊二期11号</view>
+    <view class='jd-text-right'>松江区泗泾镇江川北路327弄9号(晶尚坊二期)</view>
     <view class="arrow" />
   </view>
   <view class='jd-row' catchtap='phone'>
@@ -18,6 +18,11 @@
   <view class='jd-row' catchtap='phone2'>
     <view class='jd-text-left'></view>
     <view class='jd-text-right'>胡老师 13641794834</view>
+    <view class="arrow" />
+  </view>
+  <view class='jd-row' catchtap='phone3'>
+    <view class='jd-text-left'></view>
+    <view class='jd-text-right'>固定电话 021-67898163</view>
     <view class="arrow" />
   </view>
   <form bindsubmit="onMessageing" report-submit='true'>

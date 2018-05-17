@@ -8,7 +8,7 @@
           <image src="https://www.jdyeducation.com/images/head.png"></image>
         </view>
         <!-- <text>{{name}}</text>  -->
-        <button form-type="submit" type="default" size="mini">{{name}}</button>
+        {{name}}
 
       </view>
       <block wx:if='{{isSignOut == 2}}'>
@@ -37,7 +37,8 @@
         </view>
         <view class='liCon'>
           <view>
-            <text>状态：学习中</text>
+            <text wx:if='{{info.taskTotalDoneCount!=info.taskTotalCount}}'>状态：学习中</text>
+            <text wx:if='{{info.taskTotalDoneCount==info.taskTotalCount}}'>状态：已完成作业</text>
             <text>年级：{{grade}}</text>
             <text>作业完成数/总数：{{info.taskTotalDoneCount}}/{{info.taskTotalCount}}</text>
           </view>
